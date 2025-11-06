@@ -1,5 +1,8 @@
 <script setup>
 import { ref, computed } from 'vue'
+
+import Greetings from './components/Greetings.vue'
+
 const perspective = ref(100)
 const roatetex = ref(0)
 const roatetey = ref(0)
@@ -28,6 +31,7 @@ function copyTransform(event) {
 <template>
   <div id="app">
     <h2>CSS3 Perspective Playground</h2>
+    <greetings></greetings>
     <main>
       <section class="settings">
         <div class="settings-container">
@@ -61,5 +65,3 @@ function copyTransform(event) {
     documentation
   </p>
 </template>
-
-<style scoped></style>
