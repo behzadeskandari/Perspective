@@ -29,35 +29,33 @@ function copyTransform(event) {
 </script>
 
 <template>
-  <div id="app">
-    <h2>CSS3 Perspective Playground</h2>
-    <greetings></greetings>
-    <main>
-      <section class="settings">
-        <div class="settings-container">
-          <label>perspective: {{ perspective }}px;</label>
-          <input type="range" min="0" max="999" v-model="perspective" />
+  <h2>CSS3 Perspective Playground</h2>
+  <greetings></greetings>
+  <main>
+    <section class="settings">
+      <div class="settings-container">
+        <label>perspective: {{ perspective }}px;</label>
+        <input type="range" min="0" max="999" v-model="perspective" />
 
-          <label>rotateX: {{ roatetex }}deg; </label>
-          <input type="range" min="-180" max="180" v-model="roatetex" />
+        <label>rotateX: {{ roatetex }}deg; </label>
+        <input type="range" min="-180" max="180" v-model="roatetex" />
 
-          <label>rotateY: {{ roatetey }}deg; </label>
-          <input type="range" min="-180" max="180" v-model="roatetey" />
+        <label>rotateY: {{ roatetey }}deg; </label>
+        <input type="range" min="-180" max="180" v-model="roatetey" />
 
-          <label>rotateZ: {{ roatetez }}deg; </label>
-          <input type="range" min="-180" max="180" v-model="roatetez" />
+        <label>rotateZ: {{ roatetez }}deg; </label>
+        <input type="range" min="-180" max="180" v-model="roatetez" />
 
-          <button type="button" @click="resetValues">Reset</button>
-          <button type="button" @click="copyTransform">Copy</button>
-        </div>
-      </section>
-      <section class="output">
-        <div class="box-container">
-          <div class="box" :style="{ transform: transformValue }"></div>
-        </div>
-      </section>
-    </main>
-  </div>
+        <button type="button" @click="resetValues">Reset</button>
+        <button type="button" @click="copyTransform">Copy</button>
+      </div>
+    </section>
+    <section class="output">
+      <div class="box-container">
+        <div class="box" :style="{ transform: transformValue }"></div>
+      </div>
+    </section>
+  </main>
 
   <h1>You did it!</h1>
   <p>

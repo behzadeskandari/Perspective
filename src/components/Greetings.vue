@@ -1,7 +1,9 @@
 <template>
   <div :style="colorStyle">{{ count }} ++</div>
   <p style="color: white">{{ changeClickValue }}</p>
-  <button @click="clickEvent" style="color: white; background: black">click</button>
+  <button type="button" @click="clickEvent" style="color: white; z-index: 9999; background: black">
+    click
+  </button>
 </template>
 
 <script setup>
@@ -11,7 +13,9 @@ const count = ref(0)
 
 const colorStyle = computed(() => ({
   color: count.value % 2 === 0 ? 'red' : 'blue',
-  fontSize: '24px',
+  fontSize: '44px',
+  paddingInline: '10px',
+  paddingBottom: '10px',
 }))
 
 const changeClickValue = computed(() => `You clicked ${count.value} times`)
